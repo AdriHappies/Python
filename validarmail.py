@@ -12,7 +12,7 @@ elif (mail.find("@") != mail.rfind("@")):
     print("Error, el mail no puede contener más de una @")
 elif mail.find("@") > mail.rfind("."):
     print("Error, no hay un punto tras la @ para marcar el dominio")
-elif (len(mail[mail.find(".") + 1:]) < 2) or (len(mail[mail.find(".") + 1:]) > 4) :
+elif (len(mail[mail.rfind(".") + 1:]) < 2) or (len(mail[mail.rfind(".") + 1:]) > 4) :
     print("Error, dominio de longitud incorrecta")
 else:
     print("Mail correcto")
