@@ -6,11 +6,10 @@ aux = input()
 if (aux.isdigit() == False):
     print("Solo debe escribir los numeros sin letra")
     print(len(aux))
+elif (len(aux) != 8):
+    print("Debe contener 8 numeros")
 else:
-    if (len(aux) != 8):
-        print("Debe contener 8 numeros")
-    else:
-        numDNI = int(aux)
+    numDNI = int(aux)
     resultado = numDNI - (trunc(numDNI / 23) * 23)
     #print(resultado)
     tabladni = "TRWAGMYFPDXBNJZSQVHLCKET"
