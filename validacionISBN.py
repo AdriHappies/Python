@@ -12,7 +12,7 @@ else:
         aux = aux * (i + 1)
         suma += aux
     if (suma % 11) == 0:
-        print("\nISBN correcto")
+        print("\nISBN correcto :)")
     else:
         print("\nISBN incorrecto")
 
