@@ -16,11 +16,10 @@ def bisiesto(numero):
     return esBisiesto
 
 def listaBisiestos(year, nacimiento):
-    
-        for i in range(nacimiento, year + 1):
-            esbisiesto = bisiesto(i)
-            if esbisiesto:
-               print(i)
+    for i in range(nacimiento, year + 1):
+        esbisiesto = bisiesto(i)
+        if esbisiesto:
+            print(i)
 
 def narcisista(num):
     esNarcisista = False
