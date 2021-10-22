@@ -39,3 +39,11 @@ def elevar(num, i):
         numero *= num
     return numero
     
+def getYearFecha(textofecha):
+    if (textofecha.find("/") != -1):
+        textofecha = textofecha.replace("/", "@")
+    elif textofecha.find("-") != -1:
+        textofecha = textofecha.replace("-", "@")
+    ultimaarroba = textofecha.rfind("@")
+    yearfecha = textofecha[ultimaarroba + 1:]
+    return int(yearfecha)
