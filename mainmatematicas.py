@@ -1,34 +1,5 @@
-def mostrarMenu():
-    print("\n0.- Salir")
-    print("1.- Sumar")
-    print("2.- Restar")
-    print("3.- Dividir")
-    print("4.- Multiplicar")
-    print("\nSeleccione una opción:")
+import metodosexternosmatematicas
 
-def salir():
-    print("\nHasta luego")
-
-def sumar(num1, num2):
-    suma = num1 + num2
-    return suma
-
-def restar(num1, num2):
-    resta = num1 - num2
-    return resta
-
-def dividir(num1, num2):
-    divi = num1 / num2
-    return divi
-
-def multiplicar(num1, num2):
-    multi = num1 * num2
-    return multi
-    
-def continuar():
-    print("\n¿Desea probar con otros 2 números? (s/n)")
-
-#MAIN
 seguir = True
 cont = " "
 mismosNumeros = True
@@ -39,30 +10,30 @@ while seguir:
     numero2 = int(input())
     mismosNumeros = True
     while mismosNumeros:
-        mostrarMenu()
+        metodosexternosmatematicas.mostrarMenu()
         opcion = int(input())
         if (opcion == 1):
         #Llamamos a sumar
-            resultado = sumar(numero1, numero2)
+            resultado = metodosexternosmatematicas.sumar(numero1, numero2)
             print("La suma es " + str(resultado))
         elif (opcion == 2):
             #Llamamos a restar
-            resultado = restar(numero1, numero2)
+            resultado = metodosexternosmatematicas.restar(numero1, numero2)
             print("La resta es " + str(resultado))
         elif (opcion == 3):
             #Llamamos a dividir
-            resultado = dividir(numero1, numero2)
+            resultado = metodosexternosmatematicas.dividir(numero1, numero2)
             print("La división es " + str(resultado))
         elif (opcion == 4):
-            resultado = multiplicar(numero1, numero2)
+            resultado = metodosexternosmatematicas.multiplicar(numero1, numero2)
             print("La multiplicación es " + str(resultado))
         elif (opcion == 0):
-            salir()
+            metodosexternosmatematicas.salir()
             mismosNumeros = False
         else:
             print("Opción incorrecta") 
         if opcion != 0:
-            continuar()
+            metodosexternosmatematicas.continuar()
             cont = input()
             if cont == "s":
                 print("\nReanudamos\n")
@@ -74,5 +45,3 @@ while seguir:
                 print("\nVuelve a elegir opción")
     if opcion == 0:
         seguir = False
-
-    
