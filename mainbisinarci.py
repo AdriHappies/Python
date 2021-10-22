@@ -20,6 +20,8 @@ while opcion != 0:
                 print("\nEl año es bisiesto")
             else:
                 print("\nEl año no es bisiesto")
+        else:
+            print("Valor incorrecto")
     elif opcion == 2:
         print("Escribe un número:")
         numero = input()
@@ -29,6 +31,8 @@ while opcion != 0:
                 print("\nEl número es narcisista")
             else:
                 print("\nEl número no es narcisista")
+        else:
+            print("Valor incorrecto")
     elif opcion == 3:
         today = date.today()
         year = today.year
