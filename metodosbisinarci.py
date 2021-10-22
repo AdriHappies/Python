@@ -3,7 +3,7 @@ def menu():
     print("\n0.- Salir")
     print("1.- Calcular año Bisiesto")
     print("2.- Calcular número Narcisista")
-    print("3.- Lista de años bisiestos hasta hoy")
+    print("3.- Lista de años bisiestos desde tu nacimiento hasta hoy")
 
 def bisiesto(numero):
     esBisiesto = False
@@ -15,9 +15,9 @@ def bisiesto(numero):
             esBisiesto = True
     return esBisiesto
 
-def listaBisiestos(year):
+def listaBisiestos(year, nacimiento):
     
-        for i in range(1, year + 1):
+        for i in range(nacimiento, year + 1):
             esbisiesto = bisiesto(i)
             if esbisiesto:
                print(i)

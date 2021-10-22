@@ -36,8 +36,12 @@ while opcion != 0:
     elif opcion == 3:
         today = date.today()
         year = today.year
-        print("\nLista de años bisiestos:")
-        metodosbisinarci.listaBisiestos(year)
+        print("Introduce el año de tu nacimiento:")
+        nacimiento = input()
+        if nacimiento.isdigit():
+            nacimiento = int(nacimiento)
+            print("\nLista de años bisiestos:")
+            metodosbisinarci.listaBisiestos(year, nacimiento)
     elif opcion == 0:
         print("\nHasta luego")
     else:
