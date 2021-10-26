@@ -1,5 +1,3 @@
-import random
-
 class Mes:
     nombre = ""
     tempMax = 0
