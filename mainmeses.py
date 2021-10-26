@@ -1,39 +1,39 @@
 from mes import Mes
 import random
 meses = []
-
+nombremeses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 for i in range(12):
     month = Mes()
+    # month.nombre = nombremeses[i]
     month.nombre = "Mes " + str(i + 1)
     month.tempMax = random.randint(10, 40)
     month.tempMin = random.randint(-5, 9)
-    meses.append(month)
-    # meses.append(Mes())
     # meses[i].nombre = "Mes " + str(i + 1)
     # if i == 0:
-    #     meses[i].nombre = "Enero"
+    #     month.nombre = "Enero"
     # elif i == 1:
-    #     meses[i].nombre = "Febrero"
+    #     month.nombre = "Febrero"
     # elif i == 2:
-    #     meses[i].nombre = "Marzo"
+    #     month.nombre = "Marzo"
     # elif i == 3:
-    #     meses[i].nombre = "Abril"
+    #     month.nombre = "Abril"
     # elif i == 4:
-    #     meses[i].nombre = "Mayo"
+    #     month.nombre = "Mayo"
     # elif i == 5:
-    #     meses[i].nombre = "Junio"
+    #     month.nombre = "Junio"
     # elif i == 6:
-    #     meses[i].nombre = "Julio"
+    #     month.nombre = "Julio"
     # elif i == 7:
-    #     meses[i].nombre = "Agosto"
+    #     month.nombre = "Agosto"
     # elif i == 8:
-    #     meses[i].nombre = "Septiembre"
+    #     month.nombre = "Septiembre"
     # elif i == 9:
-    #     meses[i].nombre = "Octubre"
+    #     month.nombre = "Octubre"
     # elif i == 10:
-    #     meses[i].nombre = "Noviembre"
+    #     month.nombre = "Noviembre"
     # elif i == 11:
-    #     meses[i].nombre = "Diciembre"
+    #     month.nombre = "Diciembre"
+    meses.append(month)
 
 for mes in meses:
     print(mes)
