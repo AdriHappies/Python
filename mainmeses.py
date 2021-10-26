@@ -35,6 +35,6 @@ for i in range(12):
     # elif i == 11:
     #     meses[i].nombre = "Diciembre"
 
-for j in range(len(meses)):
-    print(meses[j])
+for mes in meses:
+    print(mes)
     
