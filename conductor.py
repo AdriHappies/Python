@@ -10,31 +10,37 @@ def mostrarMenu():
 
 
 from coche import Coche
+from deportivo import Deportivo
 
 car = Coche()
+supercar = Deportivo()
 
 car.marca = "Renault"
 car.modelo = "Captur"
+supercar.marca = "Porsche"
+supercar.modelo = "911 S"
+supercar.arrancar()
+supercar.acelerar()
 
-opcion = -1
-print("\nBienvenido al coche")
-car.getCoche()
+# opcion = -1
+# print("\nBienvenido al coche")
+# car.getCoche()
 
-while opcion != 0:
-    mostrarMenu()
-    opcion = int(input())
-    if opcion == 1:
-        car.arrancar()
-        car.getCoche()
-    elif opcion == 2:
-        car.acelerar()
-        car.getCoche()
-    elif opcion == 3:
-        car.frenar()
-        car.getCoche()
-    elif opcion == 4:
-        car.detener()
-        car.getCoche()
-    elif opcion == 0:
-        print("\nSaliendo del coche")
+# while opcion != 0:
+#     mostrarMenu()
+#     opcion = int(input())
+#     if opcion == 1:
+#         car.arrancar()
+#         car.getCoche()
+#     elif opcion == 2:
+#         car.acelerar()
+#         car.getCoche()
+#     elif opcion == 3:
+#         car.frenar()
+#         car.getCoche()
+#     elif opcion == 4:
+#         car.detener()
+#         car.getCoche()
+#     elif opcion == 0:
+#         print("\nSaliendo del coche")
     
