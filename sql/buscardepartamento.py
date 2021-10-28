@@ -18,7 +18,7 @@ numero = input()
 sql = "select dept_no, dnombre, loc from dept where dept_no =" + numero
 cursor = conexion.execute(sql)
 row = cursor.fetchone()
-if row == "None":
+if row == None:
     print("No existe el departamento")
 else:
     print(row.dnombre + ", " + row.loc)
