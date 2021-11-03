@@ -1,5 +1,7 @@
 import pyodbc
 
+from sql.conexionhospital import ConexionHospital
+
 servidor = "LOCALHOST\SQLEXPRESS"
 bbdd = "HOSPITAL"
 usuario = "sa"
@@ -16,12 +18,17 @@ for apellido, inscripcion in cursor:
 cursor.close()
 print("Introduzca el numero de inscripción del enfermo que desea eliminar:")
 ins = int(input())
-sqldelete = "delete from enfermo where inscripcion = ?"
-cursor = conexion.cursor()
-cursor.execute(sqldelete, (ins))
-print("filas afectadas: " + str(cursor.rowcount))
+# sqldelete = "delete from enfermo where inscripcion = ?"
+# cursor = conexion.cursor()
+# cursor.execute(sqldelete, (ins))
+# print("filas afectadas: " + str(cursor.rowcount))
 #cursor.commit()
-cursor.close()
+#cursor.close()
+
+#aqui eliminamos con la clase conexion
+connection = ConexionHospital()
+respuesta = connection.eliminarEnfermo(ins)
+print("Registros eliminados " + str(respuesta))
 
 
 
