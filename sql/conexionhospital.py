@@ -12,10 +12,10 @@ class ConexionHospital:
     + servidor + "; DATABASE=" + bbdd + "; UID=" + usuario + ";PWD=" + password)
 
     #metodo para ver una tabla entera
-    def selectTabla(self, tabla):
+    def selectTabla(self):
         cursor = self.conexion.cursor()
-        sqlselect = "select * from ?"
-        cursor.execute(sqlselect, (tabla))
+        sqlselect = "select * from enfermo"
+        cursor.execute(sqlselect)
         for c in cursor:
             print(c)
         cursor.close()
@@ -30,3 +30,12 @@ class ConexionHospital:
         cursor.commit()
         cursor.close()
         return eliminados
+
+    def modificarEnfermo(self, apellido, inscripcion):
+        cursor = self.conexion.cursor()
+        sqlupdate = "update enfermo set apellido = ? where inscripcion = ?"
+        cursor.execute(sqlupdate, (apellido, inscripcion))
+        modificados = cursor.rowcount
+        cursor.commit()
+        cursor.close()
+        return modificados
