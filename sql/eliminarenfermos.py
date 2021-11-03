@@ -20,6 +20,7 @@ sqldelete = "delete from enfermo where inscripcion = ?"
 cursor = conexion.cursor()
 cursor.execute(sqldelete, (ins))
 print("filas afectadas: " + str(cursor.rowcount))
+#cursor.commit()
 cursor.close()
 
 
