@@ -26,7 +26,8 @@ while opcion != 4:
     if opcion == 2:
         print("\nEscriba el número de departamento")
         num = int(input())
-        conection.eliminarDept(num)
+        respuesta = conection.eliminarDept(num)
+        print("\nRegistros eliminados: " + str(respuesta))
     if opcion == 3:
         print("\nEscriba el número de departamento")
         num = int(input())
@@ -34,7 +35,8 @@ while opcion != 4:
         nom = input()
         print("Escriba la nueva localidad del departamento")
         loc = input()
-        conection.insertarDept( nom, loc, num)
+        respuesta = conection.modificarDept(num, nom, loc)
+        print("\nRegistros modificados: " + str(respuesta))
     if opcion == 4:
         conection.conexion.close()
         print("\nHasta pronto")
