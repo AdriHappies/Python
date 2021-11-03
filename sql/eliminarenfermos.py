@@ -44,3 +44,4 @@ ape = input()
 respuesta = connection.modificarEnfermo(ape, ins)
 print("Registros modificados: " + str(respuesta))
 
+connection.conexion.close()
